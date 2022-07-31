@@ -1,6 +1,3 @@
-
-
-
 --INSERCION DE CLIENTES PEDIDOS POR UN JSON
 INSERT INTO cliente (customer_name, customer_surname, customer_DNI, dob, branch_id) VALUES
 ("Lois", "Stout", 47730534, "1984-07-07", 80),

@@ -8,7 +8,7 @@
 # EJEMPLOS DE USO
 
 * GRAL
-* especififo
+* especifico
 
 ## Para crear los datos aleatorios insertados en la Base de Datos, se utilizó la pagina:
 

@@ -14,6 +14,6 @@
 
 https://generatedata.com/
 
-##Páginas de ayuda
+## Páginas de ayuda
 * https://docs.aws.amazon.com/es_es/redshift/latest/dg/r_CAST_function.html
 * https://www.w3resource.com/sqlite/sqlite-julianday.php

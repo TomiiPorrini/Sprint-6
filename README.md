@@ -1,4 +1,4 @@
-# Sprint-7
+# Sprint-6
 
 # Introduccion, consigna y  problematicas a resolver.
 

@@ -12,8 +12,16 @@ GROUP BY sucursal.branch_id
 ORDER BY count(DISTINCT empleado.employee_id)/count(DISTINCT cliente.customer_id) DESC;
 
 #3
+SELECT branch_name, count(card_type) AS cantidad_tarjetas_credito FROM tarjeta 
+INNER JOIN cliente ON tarjeta.customer_id = cliente.customer_id 
+INNER JOIN sucursal ON cliente.branch_id = sucursal.branch_id 
+GROUP BY branch_name ORDER BY branch_name;
 
 #4
+SELECT branch_name, loan_type, avg(loan_total) AS promedio_creditos FROM prestamo 
+INNER JOIN cliente ON prestamo.customer_id = cliente.customer_id 
+INNER JOIN sucursal ON cliente.branch_id = sucursal.branch_id 
+GROUP BY branch_name ORDER BY branch_name;
 
 #5
 CREATE TABLE auditoria_cuenta (

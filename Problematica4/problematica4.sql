@@ -38,6 +38,7 @@ CREATE TABLE auditoria_cuenta (
 );
 
 CREATE TRIGGER actualizar_auditoria AFTER UPDATE ON cuenta
+WHEN old.balance <> new.balance OR old.iban <> new.iban OR old.type_account_id <> new.type_account_id
 BEGIN INSERT INTO auditoria_cuenta(
 	old_id,
 	new_id,
@@ -57,12 +58,13 @@ VALUES(
 	new.balance,
 	old.iban,
 	new.iban,
-	old.account_type_id,
-	new.account_type_id,
+	old.type_account_id,
+	new.type_account_id,
 	'UPDATE',
 	DATETIME('NOW')
 	);
-	
+END;
+
 UPDATE cuenta SET balance = balance - 100 WHERE account_id IN (10,11,12,13,14);
 
 #6
